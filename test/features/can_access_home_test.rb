@@ -1,9 +1,12 @@
 require "test_helper"
 
-feature "CanAccessHome" do
-  scenario "Welcome page" do
-    visit root_path
-    page.must_have_content "Welcome to Ramin's static Rails BDD page."
-    page.wont_have_content "Goobye All!"
+feature "Visiting the Post Index" do
+  scenario "with existing posts" do
+    #Given existing posts
+    Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
+    #When I visit/posts
+    visit posts_path
+    #Then the existing posts should be loaded
+    page.text.must_include "Becoming a Code Fellow"
   end
 end
