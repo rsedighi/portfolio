@@ -1,9 +1,14 @@
 require "test_helper"
 
 feature "Visiting the Post Index" do
-  scenario "the test is sound" do
-    visit root_path
-    page.must_have_content "Welcome to Ramin's"
-    page.wont_have_content "Goobye All!"
+  scenario "with existing posts" do
+    # Given existing posts
+    Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
+
+    # When I visit /posts
+    visit posts_path
+
+    # Then the existing posts should be loaded
+    page.text.must_include "Becoming a Code Fellow"
   end
 end

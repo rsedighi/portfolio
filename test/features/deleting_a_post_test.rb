@@ -7,7 +7,7 @@ feature "Deleting a post" do
     visit posts_path
 
     #When the delete link is clicked
-    click_on "Destroy"
+    page.find("tbody tr:last").click_on "Destroy"
 
     #Then the post is deleted
     page.wont_have_content "Becoming a Code Fellow"
