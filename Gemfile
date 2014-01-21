@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'turn', require:false
+gem 'bootstrap-sass', github: "thomas-mcdonald/bootstrap-sass"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
