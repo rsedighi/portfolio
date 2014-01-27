@@ -1,14 +1,25 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/ramin/Desktop/Code Fellows/Projects/Day 8/portfolio-with-bootstrap/app/models/post.rb": [
+      "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/models/post.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/ramin/Desktop/Code Fellows/Projects/Day 8/portfolio-with-bootstrap/app/controllers/projects_controller.rb": [
+      "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/controllers/home_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/controllers/projects_controller.rb": [
         1,
         1,
         1,
@@ -41,22 +52,11 @@
         null,
         null
       ],
-      "/Users/ramin/Desktop/Code Fellows/Projects/Day 8/portfolio-with-bootstrap/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
+      "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/models/project.rb": [
         1,
         null
       ],
-      "/Users/ramin/Desktop/Code Fellows/Projects/Day 8/portfolio-with-bootstrap/app/models/project.rb": [
-        1,
-        null
-      ],
-      "/Users/ramin/Desktop/Code Fellows/Projects/Day 8/portfolio-with-bootstrap/app/controllers/home_controller.rb": [
-        1,
-        null
-      ],
-      "/Users/ramin/Desktop/Code Fellows/Projects/Day 8/portfolio-with-bootstrap/app/controllers/posts_controller.rb": [
+      "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/controllers/posts_controller.rb": [
         1,
         1,
         null,
@@ -133,6 +133,6 @@
         null
       ]
     },
-    "timestamp": 1390693746
+    "timestamp": 1390862658
   }
 }
