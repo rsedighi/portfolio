@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
 
 <p>
   <strong>Title:</strong>
@@ -8,6 +8,11 @@
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
+</p>
+
+<p id="author">
+  <b>By:</b>
+  <%= @post.author.email %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -3,8 +3,7 @@ require 'test_helper'
 feature "As a user I want to be able to sign in to access my account"  do
   scenario "the user is signed in" do
 
-  visit "/"
-    click_on "Sign In"
+  visit new_user_session_path
 
   fill_in "Email", with: users(:mehvish).email
   fill_in "Password", with: 'password'
