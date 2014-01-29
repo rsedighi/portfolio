@@ -5,7 +5,7 @@ feature ("As a site user I want to be able to sign out from the site") do
   visit "/"
   click_on "Sign In"
 
-  fill_in "Email", with: users(:mehvish).email
+  fill_in "Email", with: users(:author1).email
   fill_in "Password", with: 'password'
   click_on "Sign in"
 
