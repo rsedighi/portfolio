@@ -50,7 +50,12 @@ feature "Creating a Post" do
     page.text.must_include "Published"
   end
 
-
+  scenario "unauthenticated site vistiors cannot see new post button" do
+    # When I visit the blog index page
+    visit posts_path
+    # Then I should not see the "New Post" button
+    page.wont_have_link "New Post"
+  end
 
   scenario "Visitors should not be able to create posts" do
     visit new_post_path
