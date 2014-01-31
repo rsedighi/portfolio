@@ -4,7 +4,7 @@ feature "Creating a Post" do
   scenario "submit form data to create a new post" do
 
     #visit user_session_path
-    sign_in
+    sign_in(:author1)
 
   #Given a completed new post form
   #visit new_user_session_path

@@ -21,6 +21,7 @@ gem 'simplecov'
 gem 'devise'
 gem 'better_errors'
 gem 'launchy'
+gem "pundit"
 
 
 

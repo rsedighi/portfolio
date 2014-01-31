@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :posts, foreign_key: "author_id"
 
+  def editor?
+    role == 'editor'
+  end
 end
