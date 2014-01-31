@@ -20,7 +20,7 @@
     <%= f.label :content %><br>
     <%= f.text_area :content %>
   </div>
-  <% if current_user.role == "editor" %>
+ <% if PostPolicy.new(current_user, @post).publish?%>
     <%= f.label :published %>
     <%= f.check_box :published %>
   <% end %>

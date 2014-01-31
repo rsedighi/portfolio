@@ -9,3 +9,7 @@ Welcome to Ramin's static Rails BDD page. If you're here, you must be interested
 <br><br><br>
 
 
+<% if current_user %>
+<%= link_to 'New Post', new_post_path %>
+<% end %>
+<br>

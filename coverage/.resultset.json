@@ -8,6 +8,11 @@
         null,
         null,
         1,
+        null,
+        1,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/ramin/Desktop/code-fellows/working-backups/portfolio-with-bootstrap/app/controllers/home_controller.rb": [
@@ -146,13 +151,13 @@
         1,
         null,
         1,
-        4,
-        4,
+        9,
+        9,
         null,
         null,
         1,
-        4,
-        4,
+        9,
+        9,
         null,
         null,
         null,
@@ -212,6 +217,6 @@
         null
       ]
     },
-    "timestamp": 1391127070
+    "timestamp": 1391128674
   }
 }
