@@ -22,6 +22,7 @@ gem 'devise'
 gem 'better_errors'
 gem 'launchy'
 gem "pundit"
+gem 'binding_of_caller'
 
 
 

@@ -3,11 +3,13 @@ require "test_helper"
 feature "Deleting a post" do
   scenario "post is deleted with a click" do
 
-    visit new_user_session_path
+    sign_in
 
-    fill_in "Email", with: users(:author1).email
-    fill_in "Password", with: 'password'
-    click_on "Sign in"
+    # visit new_user_session_path
+
+    # fill_in "Email", with: users(:author1).email
+    # fill_in "Password", with: 'password'
+    # click_on "Sign in"
 
     #Given an existing post
     post = Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
