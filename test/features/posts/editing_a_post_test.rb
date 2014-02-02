@@ -12,18 +12,18 @@ feature "Editing a Post" do
 
     sign_in
 
-    visit new_post_path
-    fill_in "Title", with: posts(:cr).title
-    fill_in "Content",  with: posts(:cr).content
+    # visit new_post_path
+    # fill_in "Title", with: posts(:cr).title
+    # fill_in "Content",  with: posts(:cr).content
 
-    click_on "Create Post"
-
+    # click_on "Create Post"
+    visit posts_path
     #Given an existing post
     #post = Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
     #visit post_path(post)
 
     #When I click edit and submit changed data
-    click_on "Edit"
+    page.find("tbody tr:last").click_on "Edit"
     fill_in "Title", with: "Becoming a Web Developer"
     click_on "Update Post"
 

@@ -12,6 +12,10 @@ class PostPolicy < ApplicationPolicy
    end
   end
 
+  def show?
+    true
+  end
+
   def destroy?
     if @user
       @user.editor?

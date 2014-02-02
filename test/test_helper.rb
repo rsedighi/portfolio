@@ -17,14 +17,14 @@ SimpleCov.start 'rails'
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
-  def sign_in(role = :author1)
+end
+  def sign_in(role = :editor)
     visit new_user_session_path
     fill_in "Email", with: users(role).email
     fill_in "Password", with: "password"
     click_on "Sign in"
   end
   # Add more helper methods to be used by all tests here...
-end
 
 
 class ActionDispatch::IntegrationTest
