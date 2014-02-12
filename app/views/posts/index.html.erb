@@ -32,6 +32,7 @@
   </tbody>
 </table>
   <% if current_user %>
-  <%= link_to 'New Post', new_post_path, class: "btn btn-primary btn-lg", role: "button" %>
+  <p><%= link_to 'New Post', new_post_path, class: "btn btn-primary btn-lg", role: "button", id: "new_post", remote: true %>
   <% end %>
+</div>
 </div>

@@ -3,9 +3,10 @@
 <title>Welcome aboard</title>
 Welcome to Ramin's Portfolio, or as I'd like to call it "blogfolio."
 <% if current_user %>
-  <p><p><a class="btn btn-primary btn-lg" role="button", <%= link_to 'New Post', new_post_path %>
+  <p><p><%= link_to 'New Post', new_post_path, class: "btn btn-primary btn-lg", role: "button", id: "new_post", remote: true %>
   <% else %>
   <p><p><a class="btn btn-primary btn-lg" role="button", <%= link_to 'Login', new_user_session_path %>
 <% end %>
 <br></a></a></p>
 </div>
+

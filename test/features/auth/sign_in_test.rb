@@ -25,7 +25,6 @@ feature "As a user I want to be able to sign in to access my account"  do
                             info: { nickname: 'test_twitter_user'},
                             })
    click_on "Sign in with Twitter"
-   save_and_open_page
    page.must_have_content "you are signed in!"
   end
 end
