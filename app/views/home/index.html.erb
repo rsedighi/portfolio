@@ -1,15 +1,11 @@
-
+<div class="jumbotron">
+  <h1>Welcome aboard</h1>
 <title>Welcome aboard</title>
-
-<h1> Welcome aboard</h1>
-
-
-Welcome to Ramin's static Rails BDD page. If you're here, you must be interested in hiring me.
-
-<br><br><br>
-
-
+Welcome to Ramin's Portfolio, or as I'd like to call it "blogfolio."
 <% if current_user %>
-<%= link_to 'New Post', new_post_path %>
+  <p><p><a class="btn btn-primary btn-lg" role="button", <%= link_to 'New Post', new_post_path %>
+  <% else %>
+  <p><p><a class="btn btn-primary btn-lg" role="button", <%= link_to 'Login', new_user_session_path %>
 <% end %>
-<br>
+<br></a></a></p>
+</div>

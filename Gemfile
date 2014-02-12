@@ -23,6 +23,8 @@ gem 'better_errors'
 gem 'launchy'
 gem "pundit"
 gem 'binding_of_caller'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 
 

@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   # GET /posts/new
@@ -74,4 +76,4 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :content, (:published if PostPolicy.new(current_user, @post).publish?))
     end
 
-end
+  end
