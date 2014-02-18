@@ -1,18 +1,32 @@
-<h2>My Projects</h2>
-
-<% @projects.each do |project| %>
-  <div class="project" id="<%= dom_id(project) %>">
+<div class="jumbotron">
+  <div class="container">
+    <h1>My Projects</h1>
     <table class="table table-hover">
-    <h3><%= project.title %></h3>
-    <p><%= project.technologies_used %></p>
-    <div class="nav">
-      <%= link_to 'Show', project %> |
-      <%= link_to 'Edit', edit_project_path(project) %> |
-      <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  </div>
-<% end %>
-</table>
+      <thead>
+        <tr>
+          <th><h4>Title</h4></th>
+          <th><h4>Content</h4></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-<br />
-<%= link_to 'New Project', new_project_path %>
+      <tbody>
+        <% @projects.each do |project| %>
+        <tr id="<%= dom_id(project) %>">
+          <td><%= project.title %></td>
+          <td><%= project.technologies_used %></td>
+          <td><%= link_to 'Show', project %></td>
+          <td><%= link_to 'Edit', edit_project_path(project) %></td>
+          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
+      </div>
+      <% end %>
+    </tbody>
+  </table>
+  <% if current_user %>
+  <p><%= link_to 'New Project', new_project_path, class: "btn btn-primary btn-lg", role: "button", id: "new_project", remote: true %>    <% end %>
+  </div>
+</div>
+</div>
