@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  before_filter :load_commentable
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
