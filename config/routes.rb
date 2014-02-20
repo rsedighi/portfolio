@@ -2,7 +2,10 @@ Portfolio::Application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
     resources :posts do
       resources :comments
+  end
 
+   resources :projects do
+    resources :comments
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,7 +13,6 @@ Portfolio::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root :to => 'home#index'
-   resources :projects
 
    #controllers:{omniauth_callbacks: "omniauth_callbacks"}
 

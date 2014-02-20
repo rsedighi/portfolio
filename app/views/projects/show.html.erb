@@ -1,11 +1,22 @@
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<h2><%= @project.title %></h2>
+<p>Technologies used: <%= @project.technologies_used %></p>
 
-<p>
-  <strong>Technologies used:</strong>
- <%= @project.technologies_used %>
-</p>
+  <div id='status'>
 
-<%= link_to 'Back', projects_path %>
+  </div>
+  <div id='new_link'>
+    <% if current_user %>
+      <%= link_to 'Add Comment', [:new, @commentable, :comment], id: 'new_link', remote: true %> |
+    <% end %>
+    <%= link_to 'Edit', edit_project_path(@project) %> |
+    <%= link_to 'Back', projects_path %>
+    <small><b><%= @project.created_at.strftime("Written on %m/%d/%Y at I:%M%p") %></b></small></div>
+
+<br />
+<br />
+
+<div class='comments' id='post_comments'>
+      <%= render @comments %>
+    </div>
+<br />
+<br />

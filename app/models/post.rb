@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
                     :length => { :minimum => 5 }
 
   belongs_to :author, class_name: "User"
-  has_many :comments, dependent: :destroy
+  has_many :comments, as: :commentable, dependent: :destroy
 
   def publish!
     published = true

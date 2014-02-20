@@ -1,4 +1,4 @@
-<p id="notice">
+<!-- <p id="notice">
 
 <p>
   <strong>Title:</strong>
@@ -17,11 +17,45 @@
 
 <p id="status">
   <b>Status: </b>
-  <%= @post.published? ? "Published" : "Unpublished" %>
+  <%#= @post.published? ? "Published" : "Unpublished" %>
 </p>
 
-<%= render @post.comments %>
-<%= render "comments/form" %>
+<div class='comments' id='post_comments'>
+<%= render @comments %>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%#= link_to 'Edit', edit_post_path(@post) %> |
+<%#= link_to 'Back', posts_path %>
+ -->
+
+
+
+
+
+
+
+
+
+ <div id='author'>
+  <h2><%= @post.title %> - <small><%= @post.author.email %></small></h2></div>
+  <h4><%= @post.content %></h4>
+
+  <div id='status'>
+
+  </div>
+  <div id='new_link'>
+    <% if current_user %>
+    <%= link_to 'Add Comment', [:new, @commentable, :comment], id: 'new_link', remote: true %> |
+    <% end %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+    <small><b>Status:</b><%= @post.published? ? 'Published' : 'Unpublished' %> | <%= @post.created_at.strftime("Written on %m/%d/%Y at I:%M%p") %></small></div>
+
+    <br />
+    <br />
+
+    <div class='comments' id='post_comments'>
+      <%= render @comments %>
+    </div>
+    <br />
+    <br />

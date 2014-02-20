@@ -1,6 +1,6 @@
-<%= comment.content %>
-  <%= comment.author %>
-
-<p>
-  <%= link_to "Destroy Comment", [comment.post, comment], method: :delete, data: {confirm: "Are you sure?"} %>
-</p>
+<div id='<%= dom_id(comment) %>'>
+  <%= comment.content %><br />
+ <%= comment.author %> |
+    <%= link_to 'Destroy', [@commentable, comment], method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
+  </small>
+</div><br />
