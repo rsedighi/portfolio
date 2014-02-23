@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token, only: [:update, :create]
 
   def index
     @projects = Project.all
@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     respond_to do |format|
       if @project.save
-        format.html {redirect_to projects_path, notice: "Project has been created." }
+        format.html { redirect_to projects_path, notice: "Project has been created." }
         format.js
       else
         format.html { render :new, error: "Project could not be saved." }
