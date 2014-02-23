@@ -47,6 +47,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    @project.image = nil
     @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_path }
