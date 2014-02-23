@@ -14,8 +14,8 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     respond_to do |format|
       if @project.save
-        format.html { redirect_to projects_path, notice: "Project has been created." }
-        format.js
+        flash[:notice] = "Project has been created."
+        redirect_to @project
       else
         format.html { render :new, error: "Project could not be saved." }
         format.js { render text: @project.errors.full_messages.join(". "), status: :unprocessable_entity }
