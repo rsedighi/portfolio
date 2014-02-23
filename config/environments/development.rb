@@ -31,14 +31,12 @@ Portfolio::Application.configure do
   Paperclip.options[:command_path] = "/usr/local/bin/"
   config.paperclip_defaults = {
     :storage => :s3,
-    s3_protocol => 'http',
-    s3_credentials => {
+    :s3_protocol => 'http',
+    :s3_credentials => {
       :bucket => ENV['AWS_BUCKET'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS']
+      :secret_access_secret => ENV['AWS_ACCESS_SECRET']
     }
-
-
   }
 
 
