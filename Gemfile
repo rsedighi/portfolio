@@ -25,6 +25,7 @@ gem "pundit"
 gem 'binding_of_caller'
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'paperclip'
 
 
 

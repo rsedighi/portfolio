@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   def index
     @projects = Project.all
@@ -11,16 +12,19 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    if @project.save
-      flash[:notice] = "Project has been created."
-      redirect_to @project
-    else
-      flash[:notice] = "An error caused the project to not save."
-      redirect_to @project
+    respond_to do |format|
+      if @project.save
+        format.html {redirect_to projects_path, notice: "Project has been created." }
+        format.js
+      else
+        format.html { render :new, error: "Project could not be saved." }
+        format.js { render text: @project.errors.full_messages.join(". "), status: :unprocessable_entity }
+      end
     end
   end
 
   def show
+    @project = Project.find(params[:id])
     @commentable = @project
     @comments = @commentable.comments
     @comment = Comment.new
@@ -50,13 +54,13 @@ class ProjectsController < ApplicationController
     end
   end
 
-private
+  private
 
-def set_project
-      @project = Project.find(params[:id])
-    end
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
   def project_params
-    params.require(:project).permit(:title, :technologies_used)
+    params.require(:project).permit(:title, :technologies_used, :image)
   end
 end
