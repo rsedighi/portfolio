@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe UserMailer do
+describe MessageMailer do
   it "must be a real test" do
     flunk "Need real tests"
   end

@@ -15,21 +15,23 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'turn', require: false
 gem 'bootstrap-sass', github: "thomas-mcdonald/bootstrap-sass"
 gem 'simplecov'
 gem 'devise'
 gem 'better_errors'
-gem 'launchy'
 gem "pundit"
 gem 'binding_of_caller'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'postmark'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'letter_opener'
+  gem 'turn', require: false
+  gem 'launchy'
 end
 
 group :production do

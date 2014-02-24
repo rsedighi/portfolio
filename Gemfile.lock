@@ -90,6 +90,8 @@ GEM
     json (1.8.1)
     launchy (2.4.2)
       addressable (~> 2.3)
+    letter_opener (1.2.0)
+      launchy (~> 2.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -131,6 +133,9 @@ GEM
       mime-types
     pg (0.17.1)
     polyglot (0.3.3)
+    postmark (1.1.0)
+      json
+      rake
     pundit (0.2.1)
       activesupport (>= 3.0.0)
     rack (1.5.2)
@@ -215,11 +220,13 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   launchy
+  letter_opener
   minitest-rails
   minitest-rails-capybara
   omniauth-twitter
   paperclip
   pg
+  postmark
   pundit
   rails (= 4.0.2)
   rails_12factor
