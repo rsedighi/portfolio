@@ -3,16 +3,9 @@ require "test_helper"
 feature "Creating a Post" do
   scenario "submit form data to create a new post" do
 
-    #visit user_session_path
-    sign_in(:author1)
+  sign_in(:author1)
 
   #Given a completed new post form
-  #visit new_user_session_path
-
-  #fill_in "Email", with: users(:mehvish).email
-  #fill_in "Password", with: 'password'
-  #click_on "Sign in"
-
 
   visit new_post_path
   fill_in "Title", with: posts(:cr).title

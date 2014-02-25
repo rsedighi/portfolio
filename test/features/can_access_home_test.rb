@@ -1,15 +1,22 @@
 require "test_helper"
 
 feature "Visiting the Post Index" do
-  scenario "with existing posts" do
-    #Given existing posts
-    #Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
+  scenario "not logged in" do
+
     #When I visit/posts
     visit posts_path
     page.text.must_include posts(:cr).title
     page.text.must_include posts(:cr).content
 
-    #Then the existing posts should be loaded
-    #page.text.must_include "Becoming a Code Fellow"
-  end
+    #If user not logged in
+    page.text.wont_include "New Post"
+end
+
+feature "Visiting the Post Index" do
+    scenario "logged in" do
+     sign_in(:author1)
+     visit posts_path
+     page.text.must_include "New Post"
+ end
+end
 end
