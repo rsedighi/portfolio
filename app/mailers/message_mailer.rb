@@ -4,6 +4,6 @@ class MessageMailer < ActionMailer::Base
   def send_message(message)
     @message = message
 
-    mail to: "rsedighi@gmail.com", subject: "New Portfolio Message"
+    mail to: "ramin@sedighi.com", subject: "New Portfolio Message"
   end
 end
