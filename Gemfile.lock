@@ -229,7 +229,6 @@ DEPENDENCIES
   omniauth-twitter
   paperclip
   pg
-  postmark
   postmark-rails (~> 0.5.2)
   pundit
   rails (= 4.0.2)
