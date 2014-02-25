@@ -29,6 +29,9 @@ module Portfolio
       g.test_framework :mini_test, :spec => true, :fixture => false
     end
 
+    ActionMailer::Base.postmark_settings = {
+    :api_key => 'POSTMARK_API_KEY'
+    }
   end
 end
 
