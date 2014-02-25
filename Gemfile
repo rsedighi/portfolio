@@ -25,7 +25,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'postmark'
+gem 'postmark-rails', '~> 0.5.2'
 
 group :development, :test do
   gem 'sqlite3'

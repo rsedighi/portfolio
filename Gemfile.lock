@@ -136,6 +136,9 @@ GEM
     postmark (1.1.0)
       json
       rake
+    postmark-rails (0.5.2)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.0)
     pundit (0.2.1)
       activesupport (>= 3.0.0)
     rack (1.5.2)
@@ -226,7 +229,7 @@ DEPENDENCIES
   omniauth-twitter
   paperclip
   pg
-  postmark
+  postmark-rails (~> 0.5.2)
   pundit
   rails (= 4.0.2)
   rails_12factor
