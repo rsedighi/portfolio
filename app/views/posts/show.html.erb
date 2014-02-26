@@ -29,13 +29,6 @@
  -->
 
 
-
-
-
-
-
-
-
  <div id='author'>
   <h2><%= @post.title %> - <small><%= @post.author.email %></small></h2></div>
   <h4><%= @post.content %></h4>
@@ -49,7 +42,7 @@
     <% end %>
     <%= link_to 'Edit', edit_post_path(@post) %> |
     <%= link_to 'Back', posts_path %>
-    <small><b>Status:</b><%= @post.published? ? 'Published' : 'Unpublished' %> | <%= @post.created_at.strftime("Written on %m/%d/%Y at I:%M%p") %></small></div>
+    <small><b>Status: </b><%= @post.published? ? 'Published' : 'Unpublished' %> | <%= @post.created_at.strftime("Written on %m/%d/%Y at I:%M%p") %></small></div>
 
     <br />
     <br />

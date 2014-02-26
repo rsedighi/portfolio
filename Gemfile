@@ -5,6 +5,7 @@ gem "minitest-rails"
 
 group :test do
   gem "minitest-rails-capybara"
+  gem 'simplecov', :require => false, :group => :test
 end
 
 
@@ -16,7 +17,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', github: "thomas-mcdonald/bootstrap-sass"
-gem 'simplecov'
 gem 'devise'
 gem 'better_errors'
 gem "pundit"

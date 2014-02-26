@@ -6,8 +6,10 @@ feature "Image upload" do
   sign_in(:author1)
 
   visit projects_path
-
   click_link "New Project"
+
+
+
 
   fill_in "Title", with: "Code Fellows Portfolio"
   fill_in "Technologies used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"

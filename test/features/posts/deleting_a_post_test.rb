@@ -6,6 +6,7 @@ feature "Deleting a post" do
     sign_in(:editor)
 
     #Given an existing post
+    new_post_published
 
     visit posts_path
 

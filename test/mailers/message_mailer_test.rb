@@ -7,7 +7,7 @@ require "test_helper"
 
   fill_in "Name", with: users(:editor).name
   fill_in "Please leave your email so we can get back to you",  with: users(:editor).email
-  fill_in "What's on your mind son?", with: posts(:cr).content
+  fill_in "What's on your mind?", with: posts(:cr).content
 
   click_on "Create Message"
 
