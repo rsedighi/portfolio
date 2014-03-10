@@ -15,7 +15,8 @@
   <ul class="nav navbar-nav navbar-right">
 
     <% if user_signed_in? %>
-    <li><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></li>
+    <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+    <li><%= link_to "", edit_user_registration_path, class: "glyphicon glyphicon-user" %></li>
      <% else %>
        <li><%= link_to('Sign In', new_user_session_path)  %></li>
       <li><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -23,7 +24,7 @@
   <% end %>
 
   <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+    <a href="#" class="glyphicon glyphicon-tasks" data-toggle="dropdown"> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a <%= link_to "Blog", posts_path%></li>
         <li><a <%= link_to "Projects", projects_path%></li>
