@@ -1,5 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
-
+  load_and_authorize_resource
   def all
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?

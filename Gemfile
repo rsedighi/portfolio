@@ -26,6 +26,7 @@ gem 'figaro'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'postmark-rails', '~> 0.5.2'
+gem 'cancancan', '~> 1.7'
 
 group :development, :test do
   gem 'sqlite3'
