@@ -29,6 +29,7 @@ feature "Creating a Post" do
     new_post_published
 
     page.must_have_content ("Published")
+    page.has_checked_field?("#post_published").should be_true
   end
 
   scenario "unauthenticated site vistiors cannot see new post button" do
